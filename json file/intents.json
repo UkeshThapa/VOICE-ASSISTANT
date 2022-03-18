@@ -1,0 +1,64 @@
+{"intents": [
+        {"tag": "greeting",
+          "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings"],
+          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?","konnichiwa"],
+          "context_set": ""
+        },
+        {"tag": "goodbye",
+          "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye","see ya","exit"],
+          "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye! See you again", "Goodbye, Thank you for using me"],
+          "context_set": ""
+        },
+        {"tag": "name",
+                "patterns": ["what is your name", "your name", "what shall i call you", "name"],
+                "responses": ["Hi, I'm penny","My friends call me penny","Hello, I'm penny your voice assistant"],
+                "context_set": ""
+        },
+        {"tag": "weather",
+                "patterns": ["whats the weather today", "Penny Check the weather", "Penny weather", "weather"],
+                "responses": [""],
+                "context_set": ""
+        },
+        {"tag": "news",
+          "patterns": ["Prime news", "what is the prime news", "todays news ", "Hot news"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "age",
+          "patterns": ["How old are you", "your age", "age"],
+          "responses": [""],
+          "context_set": ""
+        },
+
+        {"tag": "create_Note",
+          "patterns": ["penny take note", "create note", "Please create new note","create a new note","I want to create note"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "events",
+          "patterns": ["check my events", "check number of events", "Go through my events","what are my events","please check the events"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "tasks",
+          "patterns": ["check my tasks", "check number of tasks", "Go through my tasks","what are my tasks","please check the tasks"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "add_expenses",
+          "patterns": ["add my expenses", "save expenses", "add items spend","add money of the items","please note my expenses for today"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "sum_expenses",
+          "patterns": ["total money spend today", "what is the total sum of money spend today", "show the total expenses","total expenses for today","please tell me about the expenses until now"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "detail_expenses",
+          "patterns": ["what are the items I have spend money", "show my detail of expenditure", "Tell all the items of expenses","Please tell me about all the expenses I have done"],
+          "responses": [""],
+          "context_set": ""
+        }
+      ]
+      }
