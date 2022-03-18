@@ -10,6 +10,7 @@ record = sr.Recognizer ()
 #  DEFINING THE CLASS TO LISTEN THE VOICE AND RECOGNIZE THE ERROR SOUND 
 class Listen:
 
+
     def record_audio():
         with sr.Microphone() as source:
             audio = record.listen(source)
