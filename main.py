@@ -4,17 +4,25 @@ from conversations.conversation import Conversation
 import pickle
 
 
+
 def main():
     
     mapping = {
         'greeting'        : Conversation.hello,
         'goodbye'         : Conversation.Exit,
         'age'             : Conversation.age,
+        'day'             : Conversation.day,
+        'time'            : Conversation.time_today,
+        'joke'            : Conversation.joke,
+        'holiday'         : Conversation.holiday,
         'name'            : Conversation.name,
+        'roll_dice'       : Conversation.roll_dice,
+        'search'          : Conversation.search,
         'weather'         : Conversation.weather,
         'news'            : Conversation.news,
         'create_Note'     : Conversation.createNote,
         'tasks'           : Conversation.tasks,
+        'events'           : Conversation.events,
         'add_expenses'    : Conversation.add_expenses,
         'sum_expenses'    : Conversation.view_total,
         'detail_expenses' : Conversation.detail_expenses

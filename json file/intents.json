@@ -51,12 +51,42 @@
           "context_set": ""
         },
         {"tag": "sum_expenses",
-          "patterns": ["total money spend today", "what is the total sum of money spend today", "show the total expenses","total expenses for today","please tell me about the expenses until now"],
+          "patterns": ["total money spend today", "what is the total sum of money spend today", "show the total expenses","total expenses for today","please tell me about the expenses until now","sum items"],
           "responses": [""],
           "context_set": ""
         },
         {"tag": "detail_expenses",
-          "patterns": ["what are the items I have spend money", "show my detail of expenditure", "Tell all the items of expenses","Please tell me about all the expenses I have done"],
+          "patterns": ["what are the items I have spend money", "show my detail of expenditure", "Tell all the items of expenses","Please tell me about all the expenses I have done","show the details","items of expenses"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "day",
+          "patterns": ["what day is today", "Tell me today's day", "today date","what's the date","tell me date","day"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "time",
+          "patterns": ["what time it is", "Can you tell in time", "what's the time now","time now","Please can you time me time","what is the time"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "joke",
+          "patterns": ["Tell me a joke", "Can you tell me a joke", "Can you crack joke","Joke please","tell us some joke","some funny joke please"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "holiday",
+          "patterns": ["Tell the next holiday", "when is the holiday next", "which is the next holiday ","which holiday is comming soon","can you tell me the next holiday"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "roll_dice",
+          "patterns": ["Penny can you roll dice", "roll dice penny", "roll dice","Please roll dice","can you roll dice"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "search",
+          "patterns": ["Penny search", "penny find","Penny lookup","Penny I would like to search", "penny can tell me something","find","search","look up", "search from google","can you help me find"],
           "responses": [""],
           "context_set": ""
         }

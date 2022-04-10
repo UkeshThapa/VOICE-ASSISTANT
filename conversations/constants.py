@@ -6,3 +6,10 @@ close =  ["Sad to see you go :(", "Talk to you later", "Goodbye! See you again",
 hello_message =  ["Hello!", "Good to see you again!", "Hi there, how can I help?","konnichiwa"]
 
 name_message = ["Hi, I'm penny","My friends call me penny","Hello, I'm penny your voice assistant"]
+
+
+joke =["I invented a new word!.It's Plagiarism!",
+       "Hear about the new restaurant called Karma?. There’s no menu: You get what you deserve.",
+       "Why don’t scientists trust atoms? Because they make up everything.",
+       "What did the Tin Man say when he got run over by a steamroller? Curses! Foil again!",
+       "What did the left eye say to the right eye? Between you and me, something smells."]
