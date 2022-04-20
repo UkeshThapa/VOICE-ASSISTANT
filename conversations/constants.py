@@ -3,7 +3,7 @@ greeting = ["Hello sir, Please tell me how may I help you?","Nice to meet you?, 
 
 close =  ["Sad to see you go :(", "Talk to you later", "Goodbye! See you again", "Goodbye, Thank you for using me"]
 
-hello_message =  ["Hello!", "Good to see you again!", "Hi there, how can I help?","konnichiwa"]
+hello_message =  ["Hello!", "Good to see you again!", "Hi there, how can I help?","Hi"]
 
 name_message = ["Hi, I'm penny","My friends call me penny","Hello, I'm penny your voice assistant"]
 

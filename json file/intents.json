@@ -40,6 +40,16 @@
           "responses": [""],
           "context_set": ""
         },
+        {"tag": "create_events",
+          "patterns": ["penny create event", "record event", "please create my event","make a event","Can you create event"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {"tag": "create_tasks",
+          "patterns": ["penny create task", "record task", "please create a task","make a task","Can you create tasks"],
+          "responses": [""],
+          "context_set": ""
+        },
         {"tag": "tasks",
           "patterns": ["check my tasks", "check number of tasks", "Go through my tasks","what are my tasks","please check the tasks"],
           "responses": [""],

@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import conversations.constants as c
 from requests_html import HTMLSession
 from features.listening import Listen 
-from conversations.helper import writer
+from conversations.helper import create_event, writer
 from conversations.helper import create_db
 from features.speaker import Speaks as sp
 from googleapiclient.discovery import build
@@ -178,12 +178,11 @@ class Conversation:
         
     
     def events():
-        try:
-            credentials = pickle.load(open(".\\package\\tokens_events.pkl","rb"))
+            credentials = pickle.load(open("D:\\Vibes Bee\\Voice assistant\\package\\tokens_events.pkl","rb"))
             service = build('calendar', 'v3', credentials=credentials)
             result = service.calendarList().list().execute()
-            calendar_id=result['items'][-1]['id']
-            result= service.events().list(calendarId =calendar_id).execute()
+            # calendar_id=result['items'][-1]['id']
+            result= service.events().list(calendarId ='primary').execute()
             event=result['items']
             length = len(event)
             sp("Can you tell me time").speak()
@@ -204,14 +203,31 @@ class Conversation:
             data = [sp(f'{i}').speak() for i in list_events]
             sp('are some of events for {search}').speak()
         
-        except:
-            print("sorry there is no event on this day")
+
+
+    def create_events():
+        try:
+            credentials = pickle.load(open("D:\\Vibes Bee\\Voice assistant\\package\\tokens_events.pkl","rb"))
+            service = build('calendar', 'v3', credentials=credentials)
+            sp('Can you tell me title for event').speak()        
+            title = input("Events title")
+            sp('At what time you would like to start event').speak()
+            start_time = input("yukesh:")
+            sp('Can you tell me the duration for event').speak()
+            event_durations = int(input('events time duration'))
+            event= create_event(start_time,title,event_durations)
+            service.events().insert(calendarId = 'primary',body=event).execute()
+            sp('Successfully created the events').speak()
+        
+        except: 
+            sp('Sorry I can not create the event. Please try again later').speak()
+
 
 
 
     def tasks():
-        try:
-            credentials = pickle.load(open(".\\package\\tokens_tasks.pkl","rb"))
+
+            credentials = pickle.load(open("D:\\Vibes Bee\\Voice assistant\\package\\tokens_tasks.pkl","rb"))
             service = build('tasks', 'v1', credentials=credentials)
             tasks_id = 'MDgyNTExNDMwNTUzODQ1NjE2NDQ6MDow'
             res = service.tasks().list(
@@ -236,8 +252,30 @@ class Conversation:
             data = [sp(f'{i}').speak() for i in list_task]
             sp(f'are some of task for {search}').speak()
 
+
+    def create_tasks():
+        try:
+            credentials = pickle.load(open("D:\\Vibes Bee\\Voice assistant\\package\\tokens_tasks.pkl","rb"))
+            service = build('tasks', 'v1', credentials=credentials)
+            tasks_id = 'MDgyNTExNDMwNTUzODQ1NjE2NDQ6MDow'
+            sp('can you tell me date for tasks to create').speak()
+            tasks_time = input('yukesh:')
+            tasks_time = list(datefinder.find_dates(tasks_time))
+            tasks_time = tasks_time[0]
+            sp('can you tell me title for task').speak()
+            title = input("yukesh:")
+            service.tasks().insert(
+                  tasklist=tasks_id,
+                  body= {
+                    'due':  tasks_time.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+                    'title' : title
+                    }
+                    ).execute()
+            sp('Successfully task is created').speak()
+
         except:
-            print("sorry there is no tasks on this day")
+            sp('Sorry I can not create the task. Please try again later').speak()
+
 
 
 

@@ -21,8 +21,10 @@ def main():
         'weather'         : Conversation.weather,
         'news'            : Conversation.news,
         'create_Note'     : Conversation.createNote,
+        'create_events'   : Conversation.create_events,
+        'create_tasks'    : Conversation.create_tasks,
         'tasks'           : Conversation.tasks,
-        'events'           : Conversation.events,
+        'events'          : Conversation.events,
         'add_expenses'    : Conversation.add_expenses,
         'sum_expenses'    : Conversation.view_total,
         'detail_expenses' : Conversation.detail_expenses
